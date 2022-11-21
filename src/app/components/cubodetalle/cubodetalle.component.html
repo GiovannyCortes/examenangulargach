@@ -2,11 +2,16 @@
     <div>
         <h2 class="text-bg-dark giofont py-2 noselect">Detalles</h2>
         <div *ngIf="cubo" class="giobox">
-            <div class="d-inline-block border rounded p-2 my-2" style="height:300px; width: 300px; position: relative; z-index: -1;">
+            <div class="d-inline-block border rounded p-2 my-2" style="height:450px; width: 300px; position: relative; z-index: -1;">
                 <h3 class="text-bg-dark fw-bold rounded py-2">{{ cubo.nombre }}</h3>
                 <section style="width: 95%; height: 200px;">
                     <img src="{{ cubo.imagen }}" style="height: 100%; width: 100%; object-fit: cover;">
                 </section>
+                <h3>Modelo: {{ cubo.modelo }}</h3>
+                <h3>Marca: {{ cubo.marca }}</h3>
+                <h3>Color: {{ cubo.color }}</h3>
+                <h3>Precio: {{ cubo.precio }}</h3>
+                <h3>Valoración: {{ cubo.valoracion }}</h3>
             </div>
         </div>
     </div>
