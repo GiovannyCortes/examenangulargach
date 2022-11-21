@@ -42,6 +42,7 @@ export class NuevousuarioComponent implements OnInit {
                 if (miToken != null) {
                     localStorage.setItem("status", "3");
                     this.loadComponent();
+                    this._router.navigate(["/login"]);
                 }
         });
     }
@@ -60,7 +61,6 @@ export class NuevousuarioComponent implements OnInit {
             )
             this._service.postNuevoUsuario(newUser).subscribe(() => {
                 this.login(newUser.email, newUser.pass);
-                this._router.navigate(["/login"]);
             });
         } else {
             Swal.fire(

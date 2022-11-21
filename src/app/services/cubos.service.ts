@@ -87,11 +87,8 @@ export class CubosService {
     }
 
     postCompra(idCubo : string, token : string) : Observable<any> {
-        var header = new HttpHeaders();
-            //header.set("Content-Type", "application/json");
-            header.set("Authorization", "bearer " + token);
+        var header = new HttpHeaders().set("Authorization", "bearer " + token);
         var url = environment.urlApi + "/api/compra/insertarpedido/" + idCubo;
-        console.log(url);
         return this._http.post(url, "", {headers : header});
     }
 
