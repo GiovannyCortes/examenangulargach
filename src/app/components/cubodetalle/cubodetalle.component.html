@@ -1,0 +1,46 @@
+<div>
+    <div>
+        <h2 class="text-bg-dark giofont py-2 noselect">Detalles</h2>
+        <div *ngIf="cubo" class="giobox">
+            <div class="d-inline-block border rounded p-2 my-2" style="height:300px; width: 300px; position: relative; z-index: -1;">
+                <h3 class="text-bg-dark fw-bold rounded py-2">{{ cubo.nombre }}</h3>
+                <section style="width: 95%; height: 200px;">
+                    <img src="{{ cubo.imagen }}" style="height: 100%; width: 100%; object-fit: cover;">
+                </section>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2 class="text-bg-dark giofont py-2 noselect">Comentarios</h2>
+        <table class="table table-bordered table-striped mx-auto align-middle" style="max-width: 80%;"  *ngIf="comentarios">
+            <thead>
+                <tr class="text-bg-dark">
+                    <th class="border">ID</th>
+                    <th class="border">Cubo</th>
+                    <th class="border">Usuario</th>
+                    <th class="border">Comentario</th>
+                    <th class="border">Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let comentario of comentarios; let i = index">
+                    <td class="border">
+                        {{ comentario.idComentario }}
+                    </td>
+                    <td>
+                        {{ comentario.idCubo }}
+                    </td>
+                    <td>
+                        {{ comentario.idUsuario }}
+                    </td>
+                    <td>
+                        {{ comentario.comentario }}
+                    </td>
+                    <td>
+                        {{ comentario.fechaComentario }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

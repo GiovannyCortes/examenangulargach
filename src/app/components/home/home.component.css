@@ -1,0 +1,14 @@
+.giobtns {
+    bottom: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.giobox {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

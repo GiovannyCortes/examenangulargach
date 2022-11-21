@@ -1,0 +1,32 @@
+<div>
+    <div *ngIf="status == 1">
+        <form class="border mx-auto p-3" style="max-width: 75vw;" (submit)="iniciarSesion()">
+            <h3 class="border-bottom">Iniciar sesión</h3>
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" #cajausuario name="cajausuario">
+            <label class="form-label mt-2">Contraseña</label>
+            <input type="text" class="form-control" #cajapassword name="cajapassword">
+            <button class="btn btn-primary mt-2">
+                Iniciar sesión
+            </button>
+        </form>
+    </div>
+    <img src="../../../assets/cargando.gif" *ngIf="status == 2"/>
+    <div *ngIf="status == 3">
+        <h3 class="giofont text-bg-success py-2">
+            Sistema loggeado
+        </h3>
+        <button class="btn btn-danger py-2" (click)="exitlog()">
+            Salir
+        </button> &nbsp;
+        <a [routerLink]="['/perfilusuario']" class="btn btn-primary">
+            Ver perfil
+        </a> &nbsp;
+        <a [routerLink]="['/comprasusuario']" class="btn btn-success">
+            Ver compras
+        </a> &nbsp;
+        <a [routerLink]="['/insertarcompra']" class="btn btn-warning">
+            Comprar
+        </a>
+    </div>
+</div>

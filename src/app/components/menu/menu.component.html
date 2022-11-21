@@ -1,0 +1,28 @@
+<ul class="menu-bar">
+    <img src="../../../favicon.ico" class="navbar-brand"/>
+    <li class="menu-li">
+        <a class="menu-a" [routerLink]="['/login']">Login</a>
+    </li>
+    <li class="menu-li">
+        <a class="menu-a" [routerLink]="['/']">Cubos</a>
+    </li>
+    <li class="nav-item dropdown menu-li">
+        <a class="nav-link dropdown-toggle menu-a" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Marcas
+        </a>
+        <ul class="dropdown-menu mt-1">
+            <li *ngFor="let marca of marcas">
+                <a class="dropdown-item" [routerLink]="['/marca', marca]">
+                    {{ marca }}
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="menu-li">
+        <a class="menu-a" [routerLink]="['/nuevousuario']">Nuevo Usuario</a>
+    </li>
+    <!-- <form class="nonminsearch" role="search" style="margin-left: 15px;">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Buscar</button>
+    </form> -->
+</ul>

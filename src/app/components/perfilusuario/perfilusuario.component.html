@@ -1,0 +1,31 @@
+<div>
+    <table class="table table-bordered table-striped mx-auto align-middle" style="max-width: 80%;"  *ngIf="miUsuario">
+        <thead>
+            <tr class="text-bg-dark">
+                <th class="border">IdUsuario</th>
+                <th class="border">Nombre</th>
+                <th class="border">Email</th>
+                <th class="border">Pass</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border">
+                    {{ miUsuario.idUsuario }}
+                </td>
+                <td>
+                    {{ miUsuario.nombre }}
+                </td>
+                <td>
+                    {{ miUsuario.email }}
+                </td>
+                <td>
+                    {{ miUsuario.pass }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a [routerLink]="['/login']" class="btn btn-primary my-2">
+        Volver
+    </a>
+</div>

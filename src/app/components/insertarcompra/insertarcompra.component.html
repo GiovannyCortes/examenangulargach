@@ -1,0 +1,19 @@
+<div *ngIf="cubos">
+    <h1 class="giofont text-bg-dark py-2">
+        Nueva compra
+    </h1>
+    <form style="max-width: 75%;" class="mx-auto">
+        <label class="form-label mt-2">Cubos</label>
+        <select class="form-select" #selectcubos name="selectcubos" required>
+            <option *ngFor="let cubo of cubos" value="{{ cubo.idCubo }}">
+                {{ cubo.nombre }} (ID: {{ cubo.idCubo }}) - {{ cubo.precio }}€
+            </option>
+        </select>
+        <button class="btn btn-success mt-3" (click)="comprar(selectcubos.value)">
+            Comprar
+        </button> &nbsp;
+        <a [routerLink]="['/login']" class="btn btn-primary mt-3">
+            Volver
+        </a>
+    </form>
+</div>

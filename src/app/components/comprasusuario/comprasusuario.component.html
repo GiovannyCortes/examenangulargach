@@ -1,0 +1,33 @@
+<div>
+    <div *ngIf="pedidos">
+        <table class="table table-bordered table-striped mx-auto align-middle" style="max-width: 80%;">
+            <thead>
+                <tr class="text-bg-dark">
+                    <th class="border">IdCubo</th>
+                    <th class="border">IdPedido</th>
+                    <th class="border">IdUsuario</th>
+                    <th class="border">Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pedido of pedidos; let i = index">
+                    <td class="border">
+                        {{ pedido.idCubo }}
+                    </td>
+                    <td>
+                        {{ pedido.idPedido }}
+                    </td>
+                    <td>
+                        {{ pedido.idUsuario }}
+                    </td>
+                    <td>
+                        {{ pedido.fechaPedido }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <a [routerLink]="['/login']" class="btn btn-primary mt-3">
+        Volver
+    </a>
+</div>

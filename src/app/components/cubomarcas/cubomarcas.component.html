@@ -1,0 +1,16 @@
+<div>
+    <h1 class="fw-bold">Cubos de la marca <span class="azul">{{ miMarca }}</span></h1>
+    <div *ngIf="cubos" class="giobox">
+        <a *ngFor="let cubo of cubos" [routerLink]="['/cubodetalle', cubo.idCubo]" style="text-decoration: none;" class="giobox">
+            <div class="d-inline-block border rounded p-2 my-2" style="height:310px; width: 300px; position: relative;  z-index: -1;">
+                <h3 class="text-bg-dark fw-bold rounded py-2">{{ cubo.nombre }}</h3>
+                <section style="width: 95%; height: 200px;">
+                    <img src="{{ cubo.imagen }}" style="height: 100%; width: 100%; object-fit: cover;">
+                </section>
+                <h2>
+                    Precio <span class="azul">{{ cubo.precio }}€</span>
+                </h2>
+            </div>
+        </a>
+    </div>
+</div>
